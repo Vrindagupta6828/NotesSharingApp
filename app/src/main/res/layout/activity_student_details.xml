@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrey">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/welcomeAppBar"
+            android:layout_width="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="15dp"
+            app:elevation="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorGrey">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/welcomeToolBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:id="@+id/welcomeBackButton"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.1"
+                        android:visibility="visible"
+                        app:tint="@color/colorPrimary"
+                        android:contentDescription="@string/backbutton"
+                        android:src="@drawable/ic_baseline_person_24" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="?attr/actionBarSize"
+                        android:layout_weight="1.9"
+                        android:gravity="center_vertical"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="0dp"
+                        android:text="@string/student_details"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/cabin"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_below="@id/welcomeAppBar"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:padding="25dp"
+            android:background="@drawable/semi_circle"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name of Student"
+                app:endIconMode="clear_text"
+                android:id="@+id/edtName"
+                android:background="@color/colorWhite"
+                android:layout_alignParentTop="true"
+                app:endIconTint="#000"
+                app:errorEnabled="true"
+                android:layout_marginTop="0dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                app:hintTextColor="#000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/editName"
+                    android:inputType="textPersonName"
+                    android:background="@color/colorWhite"
+                    android:textColor="#000" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/phone_number"
+                android:layout_below="@id/edtName"
+                android:layout_marginTop="20dp"
+                android:id="@+id/edtPhone"
+                app:endIconMode="clear_text"
+                app:prefixText="+91"
+                app:endIconTint="#000"
+                app:hintTextColor="#000"
+                app:counterMaxLength="10"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="phone"
+                    android:drawablePadding="5dp"
+                    android:maxLength="10"
+                    android:id="@+id/editPhone"
+                    android:background="@color/colorWhite"
+                    android:textColor="#000" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/college_name"
+                android:layout_below="@id/edtPhone"
+                android:layout_marginTop="25dp"
+                android:id="@+id/edtCollegeName"
+                app:endIconTint="#000"
+                app:endIconMode="dropdown_menu"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                app:helperTextTextColor="@color/colorPrimary"
+                app:hintTextColor="#000"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true">
+
+                <AutoCompleteTextView
+                    android:id="@+id/collegeList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:backgroundTint="@color/colorWhite"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/year_of_study"
+                android:layout_below="@id/edtCollegeName"
+                android:layout_marginTop="25dp"
+                android:id="@+id/edtGraduationYear"
+                app:endIconTint="#000"
+                app:endIconMode="dropdown_menu"
+                app:helperTextTextColor="@color/colorPrimary"
+                app:hintTextColor="#000"
+                app:endIconCheckable="true"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true">
+
+<!--
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:id="@+id/editGraduationYear"
+                    android:background="@color/colorWhite"
+                    android:textColor="#000" />
+-->
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:id="@+id/yearsList"
+                    android:backgroundTint="@color/colorWhite"
+                    />
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/department"
+                android:layout_below="@id/edtGraduationYear"
+                android:layout_marginTop="25dp"
+                android:id="@+id/edtDepartment"
+                app:endIconTint="#000"
+                app:endIconMode="dropdown_menu"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                app:helperTextTextColor="@color/colorPrimary"
+                app:hintTextColor="#000"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true">
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:id="@+id/deptSpinner"
+                    android:backgroundTint="@color/colorWhite"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/section"
+                android:layout_below="@id/edtDepartment"
+                android:layout_marginTop="25dp"
+                android:id="@+id/edtSection"
+                app:endIconTint="#000"
+                app:endIconMode="dropdown_menu"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                app:helperTextTextColor="@color/colorPrimary"
+                app:hintTextColor="#000"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true">
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:id="@+id/sectionSpinner"
+                    android:background="@color/colorWhite"
+                    android:backgroundTint="@color/colorWhite"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtSection"
+                android:text="@string/t_t_tsubmit_t_t_t"
+                android:textSize="16sp"
+                android:id="@+id/btnSubmit"
+                android:layout_marginBottom="20dp"
+                android:textAllCaps="false"
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="30dp"
+                android:padding="10dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</androidx.core.widget.NestedScrollView>

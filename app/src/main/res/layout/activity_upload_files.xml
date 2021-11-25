@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrey"
+    android:orientation="vertical"
+    tools:context=".general.UploadFilesActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/welcomeAppBar"
+            android:layout_width="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            app:elevation="0dp"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorGrey">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/welcomeToolBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:id="@+id/closeButton"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.1"
+                        android:visibility="visible"
+                        app:tint="@color/colorPrimary"
+                        android:contentDescription="@string/backbutton"
+                        android:src="@drawable/ic_baseline_clear_24" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="?attr/actionBarSize"
+                        android:layout_weight="1.9"
+                        android:gravity="center_vertical"
+                        android:paddingStart="18dp"
+                        android:paddingEnd="0dp"
+                        android:text="@string/upload_notes_or_question_papers"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/cabin"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_below="@id/welcomeAppBar"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:padding="25dp"
+            android:background="@drawable/semi_circle"
+            android:orientation="vertical">
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/uploadLayout"
+                android:hint="Enter Name of Topic or Question Paper"
+                app:endIconMode="clear_text"
+                android:id="@+id/edtFileTitle"
+                android:background="@color/colorWhite"
+                app:endIconTint="#000"
+                android:layout_marginTop="25dp"
+                app:helperTextTextColor="@color/colorPrimary"
+                app:helperTextEnabled="false"
+                app:errorEnabled="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                app:hintTextColor="#000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/editFileTitle"
+                    android:inputType="text"
+                    android:background="@color/colorWhite"
+                    android:textColor="#000" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtFileTitle"
+                android:hint="@string/enter_subject_name"
+                app:endIconMode="clear_text"
+                android:id="@+id/edtSubjectName"
+                android:background="@color/colorWhite"
+                app:endIconTint="#000"
+                android:layout_marginTop="25dp"
+                app:helperTextTextColor="@color/colorPrimary"
+                app:helperTextEnabled="false"
+                app:errorEnabled="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                app:hintTextColor="#000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/subjectNameSpinner"
+                    android:inputType="text"
+                    android:background="@color/colorWhite"
+                    android:textColor="#000" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/choose_unit_number"
+                android:textSize="14sp"
+                android:layout_below="@id/edtSubjectName"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/unitText"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="20dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/unitText"
+                android:id="@+id/unitLayout"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="@string/_1"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:id="@+id/oneUnit"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/rounded_button" />
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="@string/_2"
+                    android:id="@+id/secondUnit"
+                    android:textSize="18sp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
+                    android:background="@drawable/rounded_button" />
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="@string/_3"
+                    android:id="@+id/thirdUnit"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginEnd="5dp"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
+                    android:background="@drawable/rounded_button" />
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="@string/_4"
+                    android:textSize="18sp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:id="@+id/fourthUnit"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/rounded_button" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="@string/t_tother_files_t_t"
+                    android:layout_gravity="center"
+                    android:textSize="18sp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="0dp"
+                    android:id="@+id/other"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="center_vertical"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/rounded_button" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/choose_file_type"
+                android:textSize="14sp"
+                android:layout_below="@id/unitLayout"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/fileType"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="20dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fileType"
+                android:id="@+id/fileTypeLayout"
+                android:layout_marginBottom="15dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:weightSum="4"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="@string/timage_t"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:id="@+id/imageFormat"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/rounded_button" />
+
+                <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/tpdf_t"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:id="@+id/pdfFormat"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/rounded_button" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="@string/tdoc_t"
+                    android:id="@+id/docxFormat"
+                    android:textSize="18sp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginEnd="5dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
+                    android:background="@drawable/rounded_button" />
+
+                <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/tppt_t"
+                android:id="@+id/pptFormat"
+                    android:layout_weight="1"
+                android:textSize="18sp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:layout_marginBottom="2dp"
+                android:layout_marginEnd="5dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:background="@drawable/rounded_button" />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/uploadLayout"
+                android:weightSum="2"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/uploadFileButton"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginEnd="15dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/colorLightPrimary"
+                    app:drawableTint="@color/colorPrimary"
+                    android:textColor="@color/colorPrimary"
+                    app:iconTint="@color/colorPrimary"
+                    app:icon="@drawable/ic_baseline_cloud_upload_24"
+                    android:drawableStart="@drawable/ic_baseline_upgrade_24"
+                    android:text="@string/upload_file" />
+
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/greenStatusIcon"
+                    android:visibility="gone"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/uploadFileButton"
+                    app:tint="@android:color/holo_green_dark"
+                    android:src="@drawable/ic_baseline_check_circle_24" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/statusIcon"
+                    android:visibility="visible"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/uploadFileButton"
+                    app:tint="@android:color/holo_red_dark"
+                    android:src="@drawable/ic_baseline_cancel_24" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/deleteIcon"
+                    android:visibility="gone"
+                    android:layout_marginStart="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/statusIcon"
+                    app:tint="@android:color/holo_red_dark"
+                    android:src="@drawable/ic_baseline_delete_forever_24" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="90dp"
+                android:padding="2dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_height="90dp">
+                <ProgressBar
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/customProgressBar"
+                    android:visibility="gone"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentStart="true"
+                    style="@style/CircularDeterminateProgressBar" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    android:id="@+id/txtProgress"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="12sp"
+                    android:layout_toEndOf="@id/customProgressBar" />
+
+            </RelativeLayout>
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fileTypeLayout"
+                android:text="@string/t_t_tpublish_file_t_t_t"
+                android:textSize="16sp"
+                android:id="@+id/publishFile"
+                android:textAllCaps="false"
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:visibility="visible"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="30dp"
+                android:padding="10dp"
+                />
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "991658253308",
+    "firebase_url": "https://project-b0331-default-rtdb.firebaseio.com",
+    "project_id": "project-b0331",
+    "storage_bucket": "project-b0331.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:991658253308:android:2500ef0e624c653347b079",
+        "android_client_info": {
+          "package_name": "com.vrinda.microsoft"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "991658253308-tpq8i5dofav3pbqj1665tfheligorder.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vrinda.microsoft",
+            "certificate_hash": "f668a34848a886e587fa96325b45aa0de04f51f9"
+          }
+        },
+        {
+          "client_id": "991658253308-2b3deevolbkj6vmh9k564qviq110l3pb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBR4C7npGm-c2OefN1cmVkziKDmn55lVac"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "991658253308-2b3deevolbkj6vmh9k564qviq110l3pb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

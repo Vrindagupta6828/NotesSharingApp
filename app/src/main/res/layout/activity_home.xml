@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".general.HomeActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="100dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/helloLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bottom_rounded_circle"
+                android:backgroundTint="@color/colorGrey">
+
+                <TextView
+                    android:id="@+id/studentName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="25dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/happyText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/studentName"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/happy_to_help_you"
+                    android:textSize="14sp" />
+
+                <include
+                    layout="@layout/custom_notification_layout"
+                    android:layout_alignParentEnd="true"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/notificationLayout"
+                    android:layout_marginTop="25dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="25dp"
+                    android:layout_width="wrap_content" />
+
+                <EditText
+                    android:id="@+id/searchEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_below="@id/happyText"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="20dp"
+                    android:focusableInTouchMode="false"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="80dp"
+                    android:background="@drawable/edit_text_rounded_corner"
+                    android:backgroundTint="@android:color/background_light"
+                    android:drawableStart="@drawable/ic_baseline_search_24"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/search_class_notes_here"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="0dp" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:layout_marginStart="15dp"
+                android:layout_alignParentStart="true"
+                android:scrollbars="horizontal"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/helloLayout"
+                android:layout_marginTop="-50dp"
+                android:id="@+id/dashboardRecycler" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/notes_news"
+                android:textStyle="bold"
+                android:id="@+id/notesNews"
+                android:layout_below="@id/dashboardRecycler"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:textSize="20sp"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/colorBlack" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:layout_alignParentStart="true"
+                android:scrollbars="vertical"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/notesNews"
+                android:layout_marginTop="15dp"
+                android:id="@+id/newsRecycler" />
+
+
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomnav"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        app:fabAnimationMode="scale"
+        app:hideOnScroll="true"
+        app:fabCradleMargin="8dp"
+        app:navigationIcon="@drawable/ic_baseline_menu_24"
+        app:fabAlignmentMode="end"
+        app:fabCradleRoundedCornerRadius="60dp"
+        app:navigationContentDescription="@string/app_name"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
+        app:layout_anchorGravity="center"
+        app:tint="@color/colorAccent"
+        android:src="@drawable/ic_baseline_add_24"
+        app:borderWidth="0dp"
+        android:id="@+id/uploadFilesButton"
+        app:layout_anchor="@id/bottomnav"
+        android:contentDescription="@string/app_name" />
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
