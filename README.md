@@ -55,14 +55,14 @@ Demo Video: https://drive.google.com/file/d/1ISB129DKxlaqBhM_V56uIsWNKKN6mnAV/vi
 
 <img src="https://user-images.githubusercontent.com/50476758/143485175-42edbe1f-3427-484d-88e4-f74efadbda33.jpeg" width="200" height="375">
 
-## Technologies
+### Technologies
 ***
 A list of technologies used within the project:
 * XML 
 * Kotlin
 * Firebase
 
-## Installation
+### Installation
 ***
 A little intro about the installation. 
 ```
@@ -75,7 +75,7 @@ For opening the same class use folllowing login credentials:
 
 > Password: sample@123
 
-## Features
+### Features
 ***
 Notes Sharing application has the following features:
 * Login and Sign up with Google
