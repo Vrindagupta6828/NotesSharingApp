@@ -64,7 +64,7 @@ A list of technologies used within the project:
 ***
 A little intro about the installation. 
 ```
-$ git clone https://github.com/Riyadevvarshney11/video-call-webapp.git
+$ git clone https://github.com/Vrindagupta6828/NotesSharingApp.git
 ```
 
 For opening the same class use folllowing login credentials:
