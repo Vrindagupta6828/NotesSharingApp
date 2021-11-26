@@ -18,7 +18,7 @@ Agile Methodology was used for building this project. The best Agile practices a
 ***
 Project Link: [APK file](https://drive.google.com/file/d/1SeGHFgw5-Y-qxZIIoGD5xczcVM8Opp3J/view?usp=sharing)
 
-Demo Video: https://youtu.be/MywlX0E_WVs
+Demo Video: https://drive.google.com/file/d/1ISB129DKxlaqBhM_V56uIsWNKKN6mnAV/view?usp=sharing
 
 ### Screenshots
 * Home Page
