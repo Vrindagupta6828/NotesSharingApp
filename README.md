@@ -23,35 +23,37 @@ Demo Video: https://youtu.be/MywlX0E_WVs
 ### Screenshots
 * Home Page
  
-![WhatsApp Image 2021-11-25 at 23 06 38](https://user-images.githubusercontent.com/50476758/143484589-34d3d1b4-5653-47c2-91ea-8ad3e8d143bb.jpeg)
+<img src="https://user-images.githubusercontent.com/50476758/143484589-34d3d1b4-5653-47c2-91ea-8ad3e8d143bb.jpeg" width="150"
+     height="325">
 
 * Sign Up
 
-![WhatsApp Image 2021-11-25 at 23 06 38 (1)](https://user-images.githubusercontent.com/50476758/143484677-c5cae3a8-a89b-4fe4-923b-78ed0507dc31.jpeg)
+<img src="https://user-images.githubusercontent.com/50476758/143484677-c5cae3a8-a89b-4fe4-923b-78ed0507dc31.jpeg" width="175" height="350">
 
 * Dashboard
 
-![WhatsApp Image 2021-11-25 at 23 06 38](https://user-images.githubusercontent.com/50476758/143484783-e9e1ac6f-ef37-40ec-a46c-67182dab3f85.jpeg)
+<img src="https://user-images.githubusercontent.com/50476758/143484783-e9e1ac6f-ef37-40ec-a46c-67182dab3f85.jpeg"
+     width="175" height="350">
 
 * Notifications
 
-![WhatsApp Image 2021-11-25 at 23 06 38 (1)](https://user-images.githubusercontent.com/50476758/143484828-ef0ddc79-f4f7-4480-93c8-966c92977ce7.jpeg)
+<img src="https://user-images.githubusercontent.com/50476758/143484828-ef0ddc79-f4f7-4480-93c8-966c92977ce7.jpeg" width="175" height="350">
 
 * Class Mates
 
-![WhatsApp Image 2021-11-25 at 23 06 38 (2)](https://user-images.githubusercontent.com/50476758/143484924-1af43d8f-91d5-42e1-a4f9-e8f1bae49a3c.jpeg)
+<img src="https://user-images.githubusercontent.com/50476758/143484924-1af43d8f-91d5-42e1-a4f9-e8f1bae49a3c.jpeg" width="175" height="350">
 
 * Class Notes 
 
-![WhatsApp Image 2021-11-25 at 23 06 38 (3)](https://user-images.githubusercontent.com/50476758/143484977-65e6e4da-c5b6-40e5-a782-5cf019065dda.jpeg)
+<img src="https://user-images.githubusercontent.com/50476758/143484977-65e6e4da-c5b6-40e5-a782-5cf019065dda.jpeg" width="175" height="350">
 
 * Reminder
 
-![WhatsApp Image 2021-11-25 at 23 06 38](https://user-images.githubusercontent.com/50476758/143485059-317c456f-80b4-4cd7-92b0-945ede347087.jpeg)
+<img src="https://user-images.githubusercontent.com/50476758/143485059-317c456f-80b4-4cd7-92b0-945ede347087.jpeg" width="175" height="350">
 
 * Log Out
 
-![WhatsApp Image 2021-11-25 at 23 06 38 (1)](https://user-images.githubusercontent.com/50476758/143485175-42edbe1f-3427-484d-88e4-f74efadbda33.jpeg)
+<img src="https://user-images.githubusercontent.com/50476758/143485175-42edbe1f-3427-484d-88e4-f74efadbda33.jpeg" width="175" height="350">
 
 ## Technologies
 ***
