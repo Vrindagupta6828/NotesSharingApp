@@ -64,15 +64,13 @@ A list of technologies used within the project:
 
 ### Installation
 ***
-A little intro about the installation. 
-
-Clone the repository.
-
 For opening the same class use folllowing login credentials:
 
 > Email ID: sample@gmail.com
 
 > Password: sample@123
+
+You can creat your own account as well.
 
 ### Features
 ***
